@@ -7,21 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD27E486201697B300A9C5AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27E485201697B200A9C5AB /* ViewController.swift */; };
+		BD7364692020DD2900832E89 /* libZSDK_API.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7364682020DD2900832E89 /* libZSDK_API.a */; };
+		BD73646B2020DD4300832E89 /* Zebra_SDK_EULA.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BD73646A2020DD4200832E89 /* Zebra_SDK_EULA.pdf */; };
 		BDE00FF720164939002593F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE00FF620164939002593F4 /* AppDelegate.swift */; };
-		BDE00FF920164939002593F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE00FF820164939002593F4 /* ViewController.swift */; };
-		BDE00FFC20164939002593F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE00FFA20164939002593F4 /* Main.storyboard */; };
 		BDE00FFE20164939002593F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE00FFD20164939002593F4 /* Assets.xcassets */; };
 		BDE0100120164939002593F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE00FFF20164939002593F4 /* LaunchScreen.storyboard */; };
+		BDE0100C2016494E002593F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE010092016494D002593F4 /* Main.storyboard */; };
+		BDE0100F20164B03002593F4 /* PrintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE0100E20164B03002593F4 /* PrintManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD27E485201697B200A9C5AB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD7364682020DD2900832E89 /* libZSDK_API.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libZSDK_API.a; sourceTree = "<group>"; };
+		BD73646A2020DD4200832E89 /* Zebra_SDK_EULA.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Zebra_SDK_EULA.pdf; sourceTree = "<group>"; };
+		BD7364A82020F4D600832E89 /* PrinterStatusMessages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrinterStatusMessages.h; sourceTree = "<group>"; };
+		BD7364A92020F4D600832E89 /* DiscoveredPrinter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoveredPrinter.h; sourceTree = "<group>"; };
+		BD7364AA2020F4D600832E89 /* SGD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGD.h; sourceTree = "<group>"; };
+		BD7364AB2020F4D700832E89 /* FileUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileUtil.h; sourceTree = "<group>"; };
+		BD7364AC2020F4D700832E89 /* PrinterStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrinterStatus.h; sourceTree = "<group>"; };
+		BD7364AD2020F4D700832E89 /* TcpPrinterConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TcpPrinterConnection.h; sourceTree = "<group>"; };
+		BD7364AE2020F4D700832E89 /* DiscoveredPrinterNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoveredPrinterNetwork.h; sourceTree = "<group>"; };
+		BD7364AF2020F4D800832E89 /* GraphicsUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphicsUtil.h; sourceTree = "<group>"; };
+		BD7364B02020F4D800832E89 /* MagCardReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MagCardReader.h; sourceTree = "<group>"; };
+		BD7364B12020F4D800832E89 /* ToolsUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsUtil.h; sourceTree = "<group>"; };
+		BD7364B22020F4D800832E89 /* NetworkDiscoverer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkDiscoverer.h; sourceTree = "<group>"; };
+		BD7364B32020F4D900832E89 /* FormatUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormatUtil.h; sourceTree = "<group>"; };
+		BD7364B42020F4D900832E89 /* SmartCardReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartCardReader.h; sourceTree = "<group>"; };
+		BD7364B52020F4D900832E89 /* ZebraPrinter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZebraPrinter.h; sourceTree = "<group>"; };
+		BD7364B62020F4DA00832E89 /* MfiBtPrinterConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MfiBtPrinterConnection.h; sourceTree = "<group>"; };
+		BD7364B72020F4DA00832E89 /* ResponseValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseValidator.h; sourceTree = "<group>"; };
+		BD7364B82020F4DA00832E89 /* ZebraErrorCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZebraErrorCode.h; sourceTree = "<group>"; };
+		BD7364B92020F4DA00832E89 /* ZebraPrinterFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZebraPrinterFactory.h; sourceTree = "<group>"; };
+		BD7364BA2020F4DB00832E89 /* ZplPrintMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZplPrintMode.h; sourceTree = "<group>"; };
+		BD7364BB2020F4DB00832E89 /* FieldDescriptionData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FieldDescriptionData.h; sourceTree = "<group>"; };
+		BD7364BC2020F4DB00832E89 /* ZebraPrinterConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZebraPrinterConnection.h; sourceTree = "<group>"; };
+		BD7364BE2020F53700832E89 /* BluetoothTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BluetoothTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		BDE00FF320164939002593F4 /* BluetoothTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE00FF620164939002593F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDE00FF820164939002593F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BDE00FFB20164939002593F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDE00FFD20164939002593F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDE0100020164939002593F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDE0100220164939002593F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE010092016494D002593F4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BDE0100E20164B03002593F4 /* PrintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,16 +57,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7364692020DD2900832E89 /* libZSDK_API.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD7364BD2020F4E800832E89 /* ZebraSDK */ = {
+			isa = PBXGroup;
+			children = (
+				BD7364A92020F4D600832E89 /* DiscoveredPrinter.h */,
+				BD7364AE2020F4D700832E89 /* DiscoveredPrinterNetwork.h */,
+				BD7364BB2020F4DB00832E89 /* FieldDescriptionData.h */,
+				BD7364AB2020F4D700832E89 /* FileUtil.h */,
+				BD7364B32020F4D900832E89 /* FormatUtil.h */,
+				BD7364AF2020F4D800832E89 /* GraphicsUtil.h */,
+				BD7364B02020F4D800832E89 /* MagCardReader.h */,
+				BD7364B62020F4DA00832E89 /* MfiBtPrinterConnection.h */,
+				BD7364B22020F4D800832E89 /* NetworkDiscoverer.h */,
+				BD7364AC2020F4D700832E89 /* PrinterStatus.h */,
+				BD7364A82020F4D600832E89 /* PrinterStatusMessages.h */,
+				BD7364B72020F4DA00832E89 /* ResponseValidator.h */,
+				BD7364AA2020F4D600832E89 /* SGD.h */,
+				BD7364B42020F4D900832E89 /* SmartCardReader.h */,
+				BD7364AD2020F4D700832E89 /* TcpPrinterConnection.h */,
+				BD7364B12020F4D800832E89 /* ToolsUtil.h */,
+				BD7364B82020F4DA00832E89 /* ZebraErrorCode.h */,
+				BD7364B52020F4D900832E89 /* ZebraPrinter.h */,
+				BD7364BC2020F4DB00832E89 /* ZebraPrinterConnection.h */,
+				BD7364B92020F4DA00832E89 /* ZebraPrinterFactory.h */,
+				BD7364BA2020F4DB00832E89 /* ZplPrintMode.h */,
+			);
+			path = ZebraSDK;
+			sourceTree = "<group>";
+		};
 		BDE00FEA20164939002593F4 = {
 			isa = PBXGroup;
 			children = (
 				BDE00FF520164939002593F4 /* BluetoothTest */,
+				BD7364682020DD2900832E89 /* libZSDK_API.a */,
+				BD73646A2020DD4200832E89 /* Zebra_SDK_EULA.pdf */,
 				BDE00FF420164939002593F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,11 +114,14 @@
 			isa = PBXGroup;
 			children = (
 				BDE00FF620164939002593F4 /* AppDelegate.swift */,
-				BDE00FF820164939002593F4 /* ViewController.swift */,
-				BDE00FFA20164939002593F4 /* Main.storyboard */,
+				BDE0100E20164B03002593F4 /* PrintManager.swift */,
+				BDE010092016494D002593F4 /* Main.storyboard */,
+				BD27E485201697B200A9C5AB /* ViewController.swift */,
+				BD7364BD2020F4E800832E89 /* ZebraSDK */,
 				BDE00FFD20164939002593F4 /* Assets.xcassets */,
 				BDE00FFF20164939002593F4 /* LaunchScreen.storyboard */,
 				BDE0100220164939002593F4 /* Info.plist */,
+				BD7364BE2020F53700832E89 /* BluetoothTest-Bridging-Header.h */,
 			);
 			path = BluetoothTest;
 			sourceTree = "<group>";
@@ -96,6 +158,7 @@
 				TargetAttributes = {
 					BDE00FF220164939002593F4 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,8 +187,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDE0100120164939002593F4 /* LaunchScreen.storyboard in Resources */,
+				BD73646B2020DD4300832E89 /* Zebra_SDK_EULA.pdf in Resources */,
 				BDE00FFE20164939002593F4 /* Assets.xcassets in Resources */,
-				BDE00FFC20164939002593F4 /* Main.storyboard in Resources */,
+				BDE0100C2016494E002593F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDE00FF920164939002593F4 /* ViewController.swift in Sources */,
+				BD27E486201697B300A9C5AB /* ViewController.swift in Sources */,
+				BDE0100F20164B03002593F4 /* PrintManager.swift in Sources */,
 				BDE00FF720164939002593F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,14 +209,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BDE00FFA20164939002593F4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BDE00FFB20164939002593F4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BDE00FFF20164939002593F4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -274,11 +331,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JN6SRFFEJW;
 				INFOPLIST_FILE = BluetoothTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = testetest.BluetoothTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BluetoothTest/BluetoothTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,11 +353,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JN6SRFFEJW;
 				INFOPLIST_FILE = BluetoothTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = testetest.BluetoothTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BluetoothTest/BluetoothTest-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

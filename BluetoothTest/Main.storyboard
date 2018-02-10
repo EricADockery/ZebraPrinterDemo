@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qEO-Wi-Kiv">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,71 +13,42 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreBluetooth" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BluetoothTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Enb-Le-eKT">
-                                <rect key="frame" x="321" y="69" width="46" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Printer Not Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixD-Dy-GpS">
+                                <rect key="frame" x="10" y="74" width="172" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8A-dZ-U89">
+                                <rect key="frame" x="274" y="64" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="goToPrinterView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdy-u9-6rv"/>
+                                    <action selector="printTestLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ktJ-eb-Ooi"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Enb-Le-eKT" secondAttribute="trailing" constant="8" id="Wn5-aI-UE1"/>
-                            <constraint firstItem="Enb-Le-eKT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="iET-Rg-NdO"/>
+                            <constraint firstItem="ixD-Dy-GpS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="1Da-7C-HPD"/>
+                            <constraint firstItem="ixD-Dy-GpS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="dNg-uI-0ce"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="l1f-9L-ND3"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <segue destination="Zpp-ks-6Gi" kind="show" identifier="FindPrinterViewControllerSegue" id="vtp-Oy-hm3"/>
+                        <outlet property="printerConnectionStatus" destination="ixD-Dy-GpS" id="i3P-mK-DLO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="479.19999999999999" y="132.68365817091455"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="i8o-PB-aCy">
-            <objects>
-                <viewController id="Zpp-ks-6Gi" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eJQ-5K-X3J">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Giz-Lv-enb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="E86-3D-8jF">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E86-3D-8jF" id="juN-Gk-jfG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="zaa-qQ-Axz" firstAttribute="trailing" secondItem="Giz-Lv-enb" secondAttribute="trailing" id="3Yl-4L-SAA"/>
-                            <constraint firstItem="Giz-Lv-enb" firstAttribute="top" secondItem="zaa-qQ-Axz" secondAttribute="top" id="AkQ-sh-eFT"/>
-                            <constraint firstItem="Giz-Lv-enb" firstAttribute="leading" secondItem="zaa-qQ-Axz" secondAttribute="leading" id="Vjn-M0-UQK"/>
-                            <constraint firstItem="zaa-qQ-Axz" firstAttribute="bottom" secondItem="Giz-Lv-enb" secondAttribute="bottom" id="jog-xS-6ED"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="zaa-qQ-Axz"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HJP-pR-Jdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1306" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TgC-DJ-x9Q">
@@ -85,7 +56,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qEO-Wi-Kiv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IoW-na-TOS">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

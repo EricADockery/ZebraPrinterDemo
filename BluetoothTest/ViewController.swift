@@ -8,18 +8,34 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController  {
+
+
+    @IBOutlet var printerConnectionStatus: UILabel!
+    var printManager = PrintManager.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        printManager.connectionDelegate = self
+        if printManager.isConnected {
+            printerConnectionStatus.text = "Connected"
+        } else {
+            printerConnectionStatus.text = "Not Connected"
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func printTestLabel(_ sender: Any) {
+        printManager.printBarcode(for: "This is a test")
     }
-
 
 }
 
+extension ViewController: EAAccessoryManagerConnectionStatusDelegate {
+    func changeLabelStatus() {
+        if printManager.isConnected {
+            printerConnectionStatus.text = "Connected"
+        } else {
+            printerConnectionStatus.text = "Not Connected"
+        }
+    }
+}
