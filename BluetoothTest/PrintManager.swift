@@ -14,7 +14,7 @@ protocol EAAccessoryManagerConnectionStatusDelegate {
 
 enum CommonPrintingFormat: String {
     case start = "! 0 200 200 150 1"
-    case end = "\nFORM\nPRINT "
+    case end = "\nFORM\nPRINT\n"
 }
 
 class PrintManager: NSObject {
