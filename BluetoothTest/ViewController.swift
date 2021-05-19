@@ -25,7 +25,13 @@ class ViewController: UIViewController  {
     }
 
     @IBAction func printTestLabel(_ sender: Any) {
-        printManager.printBarcode(for: "This is a test")
+        let queue = DispatchQueue(label: "your bundle identifier")
+             queue.async {
+                 self.printManager.printBarcode(for: "This is a test")
+             DispatchQueue.main.async {
+                        // Update the UI here
+             }
+        }
     }
 
 }
