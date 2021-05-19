@@ -68,6 +68,7 @@ class PrintManager: NSObject {
     private func connectToPrinter( completion: (Bool) -> Void) {
         printerConnection = MfiBtPrinterConnection(serialNumber: serialNumber)
         printerConnection?.open()
+        printerConnection?.setTimeToWaitAfterWriteInMilliseconds(60)
         completion(true)
     }
 
